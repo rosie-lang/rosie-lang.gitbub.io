@@ -1,0 +1,8 @@
+title: "Rosie Pattern Language"
+url: "http://rosie-lang.org" # the base hostname & protocol for your site
+email: info@rosie-lang.org
+twitter_username: jamietheriveter
+github_username:  jamiejennings
+#description: "This blog is under construction"
+markdown: kramdown
+#highlighter: rouge
