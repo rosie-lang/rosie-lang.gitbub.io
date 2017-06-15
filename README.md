@@ -1,2 +1,2 @@
-# rosie-lang.gitbub.io
+# rosie-lang.github.io
 Website content for rosin-lang.github.io
