@@ -124,7 +124,7 @@ appears on the left side of the page.
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #FFFFFF; /* #333; */
+            background: #5786ba; /* #FFFFFF; #333; */
         }
 
     /*
@@ -134,13 +134,13 @@ appears on the left side of the page.
     #menu .pure-menu-heading {
 	/* background of 'title' in _config.yaml */
 	text-transform: none;
-        background: #002146; /* #990000; #1f8dd6; */
+        background: #002146; /* Rosie dark blue */
     }
         /*
         This styles a link within a selected menu item `<li>`.
         */
         #menu .pure-menu-selected a {
-            color: #fff;
+            color: #002146; /* #fff; */
         }
 
     /*
