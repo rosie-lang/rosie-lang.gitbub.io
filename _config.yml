@@ -5,4 +5,4 @@ twitter_username: jamietheriveter
 github_username:  jamiejennings
 #description: "This blog is under construction"
 markdown: kramdown
-#highlighter: rouge
+highlighter: rouge
