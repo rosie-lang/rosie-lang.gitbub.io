@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rosie v1.0 Preview #7: ..."
-date:   2017-09-xx
+#date:   2017-09-xx
 categories: preview
 ---
 
