@@ -57,5 +57,5 @@ Rosie is *flexible and extensible.*
 
 Rosie is released under the [MIT license](https://opensource.org/licenses/mit-license.html)
 
-You can download Rosie from [github](github.com/jamiejennings/rosie-pattern-language)
+You can download Rosie from [github](http://github.com/jamiejennings/rosie-pattern-language)
 
