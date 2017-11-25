@@ -7,3 +7,6 @@ github_username:  jamiejennings
 #description: "This blog is under construction"
 markdown: kramdown
 highlighter: rouge
+plugins:
+  - jekyll-sitemap
+  

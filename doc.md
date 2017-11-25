@@ -7,8 +7,8 @@ permalink: /doc/
 
 
 
-The current documentation, for Rosie v0.99, is at
-[https://github.com/jamiejennings/rosie-pattern-language/#docs](https://github.com/jamiejennings/rosie-pattern-language/#docs)
+Documentation for Rosie v1.0.0 is at 
+[https://github.com/jamiejennings/rosie-pattern-language/#contents](https://github.com/jamiejennings/rosie-pattern-language/#contents)
 
-This page will contain documentation for Rosie v1.0.0 (summer 2017).
+
 
