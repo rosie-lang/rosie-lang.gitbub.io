@@ -5,6 +5,9 @@ date:   2017-11-25
 categories: howto
 ---
 
+<span class="comment">Edited Sat Nov 25 17:53:46 EST 2017: Examples were updated to Rosie v1.0.0-alpha-6.</span>
+
+
 In 5 minutes, you'll have Rosie installed in a local directory like `/tmp` or
 `/home/whomever`.  In 10 minutes, you'll be using the standard pattern library
 to extract _from your own data_ a variety of common patterns like network
@@ -76,7 +79,7 @@ Options:
                          Load an RPL file
    <span class="comment">--libpath</span> &lt;libpath&gt;   Directories to search for rpl modules
    <span class="comment">-o</span> &lt;output&gt;, <span class="comment">--output</span> &lt;output&gt;
-                         Output style, one of: nocolor, color, none, line, text, subs, default, json, byte
+                         Output style, one of: none, subs, line, byte, json, matches, default, color
 
 Commands:
    help                  Print this help message
@@ -162,12 +165,11 @@ sample data from the rosie test directory...
 </style>
 <pre>
 <span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie match all.things test/logfile </span>
-<span class="custom-2">Apr</span> <span class="custom-2">8</span> <span class="bold"><span class="custom-2">09</span></span> <span class="bold"><span class="custom-2">42</span></span> <span class="bold"><span class="custom-2">24</span></span> <span class="custom-3">Js-MacBook-Pro</span> <span class="custom-1">com.apple.xpc.launchd</span> <span class="custom-5">[</span> <span class="underline">1</span> <span class="custom-5">]</span> <span class="custom-5">(</span> <span class="custom-1">homebrew.mxcl.kafka</span> <span class="custom-5">[</span> <span class="underline">68878</span> <span class="custom-5">]</span> <span class="custom-5">)</span> <span class="custom-5">:</span> <span class="custom-4">Service</span> <span class="custom-4">exited</span> <span class="custom-4">with</span> <span class="custom-4">abnormal</span> <span class="custom-4">code</span> <span class="custom-5">:</span> <span class="underline">1</span>
-<span class="custom-2">Apr</span> <span class="custom-2">8</span> <span class="bold"><span class="custom-2">09</span></span> <span class="bold"><span class="custom-2">42</span></span> <span class="bold"><span class="custom-2">24</span></span> <span class="custom-3">Js-MacBook-Pro</span> <span class="custom-1">com.apple.xpc.launchd</span> <span class="custom-5">[</span> <span class="underline">1</span> <span class="custom-5">]</span> <span class="custom-5">(</span> <span class="custom-1">homebrew.mxcl.kafka</span> <span class="custom-5">)</span> <span class="custom-5">:</span> <span class="custom-4">Service</span> <span class="custom-4">only</span> <span class="custom-4">ran</span> <span class="custom-4">for</span> <span class="underline">8</span> <span class="custom-4">seconds</span> <span class="custom-5">.</span> <span class="custom-4">Pushing</span> <span class="custom-4">respawn</span> <span class="custom-4">out</span> <span class="custom-4">by</span> <span class="underline">2</span> <span class="custom-4">seconds</span> <span class="custom-5">.</span>
-<span class="custom-2">Apr</span> <span class="custom-2">8</span> <span class="bold"><span class="custom-2">10</span></span> <span class="bold"><span class="custom-2">10</span></span> <span class="bold"><span class="custom-2">18</span></span> <span class="custom-1">Js-MacBook-Pro.local</span> <span class="custom-3">MUpdate</span> <span class="custom-5">[</span> <span class="underline">69707</span> <span class="custom-5">]</span> <span class="custom-5">:</span> <span class="custom-4">Endpoint</span> <span class="custom-4">at</span> <span class="custom">'/Applications/Meeting.app'</span> <span class="custom-4">is</span> <span class="custom-4">latest</span> <span class="custom-4">version</span> <span class="custom-5">(</span> <span class="underline">4732</span> <span class="custom-5">)</span> <span class="custom-5">,</span> <span class="custom-4">skipping</span> <span class="custom-5">.</span>
-<span class="custom-2">Apr</span> <span class="custom-2">8</span> <span class="bold"><span class="custom-2">10</span></span> <span class="bold"><span class="custom-2">10</span></span> <span class="bold"><span class="custom-2">18</span></span> <span class="custom-1">Js-MacBook-Pro.local</span> <span class="custom-3">MUpdate</span> <span class="custom-5">[</span> <span class="underline">69707</span> <span class="custom-5">]</span> <span class="custom-5">:</span> <span class="custom-4">Next</span> <span class="custom-4">Update</span> <span class="custom-4">Check</span> <span class="custom-4">at</span> <span class="custom-2">2016</span> <span class="custom-2">04</span> <span class="custom-2">09</span> <span class="bold"><span class="custom-2">02</span></span> <span class="bold"><span class="custom-2">22</span></span> <span class="bold"><span class="custom-2">03</span></span> <span class="bold"><span class="custom-2">+0000</span></span>
-<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span>
-</pre>
+<span class="custom-4">Apr</span>  <span class="custom-4">8</span> <span class="bold"><span class="custom-4">09</span></span>:<span class="bold"><span class="custom-4">42</span></span>:<span class="bold"><span class="custom-4">24</span></span> <span class="custom-3">Js-MacBook-Pro</span> <span class="custom-2">com.apple.xpc.launchd</span><span class="bold">[</span><span class="underline">1</span><span class="bold">]</span> <span class="bold">(</span><span class="custom-2">homebrew.mxcl.kafka</span><span class="bold">[</span><span class="underline">68878</span><span class="bold">]):</span> <span class="custom-1">Service</span> <span class="custom-1">exited</span> <span class="custom-1">with</span> <span class="custom-1">abnormal</span> <span class="custom-1">code</span><span class="bold">:</span> <span class="underline">1</span>
+<span class="custom-4">Apr</span>  <span class="custom-4">8</span> <span class="bold"><span class="custom-4">09</span></span>:<span class="bold"><span class="custom-4">42</span></span>:<span class="bold"><span class="custom-4">24</span></span> <span class="custom-3">Js-MacBook-Pro</span> <span class="custom-2">com.apple.xpc.launchd</span><span class="bold">[</span><span class="underline">1</span><span class="bold">]</span> <span class="bold">(</span><span class="custom-2">homebrew.mxcl.kafka</span><span class="bold">):</span> <span class="custom-1">Service</span> <span class="custom-1">only</span> <span class="custom-1">ran</span> <span class="custom-1">for</span> <span class="underline">8</span> <span class="custom-1">seconds</span><span class="bold">.</span> <span class="custom-1">Pushing</span> <span class="custom-1">respawn</span> <span class="custom-1">out</span> <span class="custom-1">by</span> <span class="underline">2</span> <span class="custom-1">seconds</span><span class="bold">.</span>
+<span class="custom-4">Apr</span>  <span class="custom-4">8</span> <span class="bold"><span class="custom-4">10</span></span>:<span class="bold"><span class="custom-4">10</span></span>:<span class="bold"><span class="custom-4">18</span></span> <span class="custom-2">Js-MacBook-Pro.local</span> <span class="custom-3">MUpdate</span><span class="bold">[</span><span class="underline">69707</span><span class="bold">]:</span> <span class="custom-1">Endpoint</span> <span class="custom-1">at</span> <span class="custom">'/Applications/Meeting.app'</span> <span class="custom-1">is</span> <span class="custom-1">latest</span> <span class="custom-1">version</span> <span class="bold">(</span><span class="underline">4732</span><span class="bold">),</span> <span class="custom-1">skipping</span><span class="bold">.</span>
+<span class="custom-4">Apr</span>  <span class="custom-4">8</span> <span class="bold"><span class="custom-4">10</span></span>:<span class="bold"><span class="custom-4">10</span></span>:<span class="bold"><span class="custom-4">18</span></span> <span class="custom-2">Js-MacBook-Pro.local</span> <span class="custom-3">MUpdate</span><span class="bold">[</span><span class="underline">69707</span><span class="bold">]:</span> <span class="custom-1">Next</span> <span class="custom-1">Update</span> <span class="custom-1">Check</span> <span class="custom-1">at</span> <span class="custom-4">2016</span>-<span class="custom-4">04</span>-<span class="custom-4">09</span> <span class="bold"><span class="custom-4">02</span></span>:<span class="bold"><span class="custom-4">22</span></span>:<span class="bold"><span class="custom-4">03</span></span> <span class="bold"><span class="custom-4">+0000</span></span>
+<span class="comint-highlight-prompt">rosie-pattern-language$ </span></pre>
 
 A few things to notice:
 - The CLI automatically executes `import all` upon seeing use of the pattern
@@ -185,7 +187,7 @@ rosie to import that package:
 
 <pre>
 <span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie --rpl 'import net' list net.*</span>
-Rosie 1.0.0-alpha-6(candidate)
+Rosie 1.0.0-alpha-6
 
 Name                           Cap? Type       Color           Source
 ------------------------------ <span class="comment">----</span> <span class="comment">----------</span> <span class="comment">---------------</span> <span class="comment">------------------------------</span>
@@ -233,7 +235,6 @@ userinfo                       Yes  pattern    red (default)   ...attern-languag
 
 41/41 names shown
 <span class="comint-highlight-prompt">rosie-pattern-language$ </span></pre>
-
 
 Another way to explore the RPL standard library is to examine the files in the
 `rpl` directory.  In each file, you'll find comments and test cases that show
@@ -359,19 +360,20 @@ Here are some suggestions for experimenting on your own data using the Rosie CLI
     -->
     </style>
 <pre>
-<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie grep ts.any test/logfile </span>
+<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie grep ts.any test/logfile</span>
 Apr  8 09:42:24 Js-MacBook-Pro com.apple.xpc.launchd[1] (homebrew.mxcl.kafka[68878]): Service exited with abnormal code: 1
 Apr  8 09:42:24 Js-MacBook-Pro com.apple.xpc.launchd[1] (homebrew.mxcl.kafka): Service only ran for 8 seconds. Pushing respawn out by 2 seconds.
 Apr  8 10:10:18 Js-MacBook-Pro.local MUpdate[69707]: Endpoint at '/Applications/Meeting.app' is latest version (4732), skipping.
 Apr  8 10:10:18 Js-MacBook-Pro.local MUpdate[69707]: Next Update Check at 2016-04-09 02:22:03 <span class="comment">+0000</span>
-<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie -o color grep 'ts.any id.any' test/logfile </span>
-<span class="custom-1">Apr</span> <span class="custom-1">8</span> <span class="bold"><span class="custom-1">09</span></span> <span class="bold"><span class="custom-1">42</span></span> <span class="bold"><span class="custom-1">24</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span>
-<span class="custom-1">Apr</span> <span class="custom-1">8</span> <span class="bold"><span class="custom-1">09</span></span> <span class="bold"><span class="custom-1">42</span></span> <span class="bold"><span class="custom-1">24</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span>
-<span class="custom-1">Apr</span> <span class="custom-1">8</span> <span class="bold"><span class="custom-1">10</span></span> <span class="bold"><span class="custom-1">10</span></span> <span class="bold"><span class="custom-1">18</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span> <span class="bold"><span class="custom">local</span></span>
-<span class="custom-1">Apr</span> <span class="custom-1">8</span> <span class="bold"><span class="custom-1">10</span></span> <span class="bold"><span class="custom-1">10</span></span> <span class="bold"><span class="custom-1">18</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span> <span class="bold"><span class="custom">local</span></span>
-<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie -o color grep 'ts.any id.any find:ts.any' test/logfile </span>
-<span class="custom-1">Apr</span> <span class="custom-1">8</span> <span class="bold"><span class="custom-1">10</span></span> <span class="bold"><span class="custom-1">10</span></span> <span class="bold"><span class="custom-1">18</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span> <span class="bold"><span class="custom">local</span></span> <span class="custom-1">2016</span> <span class="custom-1">04</span> <span class="custom-1">09</span> <span class="bold"><span class="custom-1">02</span></span> <span class="bold"><span class="custom-1">22</span></span> <span class="bold"><span class="custom-1">03</span></span> <span class="bold"><span class="custom-1">+0000</span></span>
+<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie -o color grep 'ts.any id.any' test/logfile</span>
+<span class="custom-1">Apr</span>  <span class="custom-1">8</span> <span class="bold"><span class="custom-1">09</span></span>:<span class="bold"><span class="custom-1">42</span></span>:<span class="bold"><span class="custom-1">24</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span> com.apple.xpc.launchd[1] (homebrew.mxcl.kafka[68878]): Service exited with abnormal code: 1
+<span class="custom-1">Apr</span>  <span class="custom-1">8</span> <span class="bold"><span class="custom-1">09</span></span>:<span class="bold"><span class="custom-1">42</span></span>:<span class="bold"><span class="custom-1">24</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span> com.apple.xpc.launchd[1] (homebrew.mxcl.kafka): Service only ran for 8 seconds. Pushing respawn out by 2 seconds.
+<span class="custom-1">Apr</span>  <span class="custom-1">8</span> <span class="bold"><span class="custom-1">10</span></span>:<span class="bold"><span class="custom-1">10</span></span>:<span class="bold"><span class="custom-1">18</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span>.<span class="bold"><span class="custom">local</span></span> MUpdate[69707]: Endpoint at '/Applications/Meeting.app' is latest version (4732), skipping.
+<span class="custom-1">Apr</span>  <span class="custom-1">8</span> <span class="bold"><span class="custom-1">10</span></span>:<span class="bold"><span class="custom-1">10</span></span>:<span class="bold"><span class="custom-1">18</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span>.<span class="bold"><span class="custom">local</span></span> MUpdate[69707]: Next Update Check at 2016-04-09 02:22:03 <span class="comment">+0000</span>
+<span class="comint-highlight-prompt"><span class="comint-highlight-prompt">rosie-pattern-language$ </span></span><span class="comint-highlight-input">bin/rosie -o color grep 'ts.any id.any find:ts.any' test/logfile</span>
+<span class="custom-1">Apr</span>  <span class="custom-1">8</span> <span class="bold"><span class="custom-1">10</span></span>:<span class="bold"><span class="custom-1">10</span></span>:<span class="bold"><span class="custom-1">18</span></span> <span class="bold"><span class="custom">Js-MacBook-Pro</span></span>.<span class="bold"><span class="custom">local</span></span> MUpdate[69707]: Next Update Check at <span class="custom-1">2016</span>-<span class="custom-1">04</span>-<span class="custom-1">09</span> <span class="bold"><span class="custom-1">02</span></span>:<span class="bold"><span class="custom-1">22</span></span>:<span class="bold"><span class="custom-1">03</span></span> <span class="bold"><span class="custom-1">+0000</span></span>
 <span class="comint-highlight-prompt">rosie-pattern-language$ </span></pre>
+
 
 ### The Read-Eval-Print Loop (REPL)
 
