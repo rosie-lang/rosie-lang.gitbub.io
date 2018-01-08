@@ -15,6 +15,9 @@ beta: thread safety; unicode predicates; and enhanced customization.
 
 ## Thread safety
 
+_Edit: [2018-01-08] Thread safety arrived in `librosie` in v1.0.0-alpha-7.  See
+`src/librosie/C/mt.c` for an example of a multi-threaded Rosie program._
+
 The `librosie` in v1.0.0-alpha-6 (and earlier) is not thread-safe.  Some changes
 to the API and to the compilation of the library will make it safe for
 multi-threading.  An enforced limitation is that a matching engine may be used
@@ -39,6 +42,8 @@ encodings have been received, but we are
 [interested to know](https://www.reddit.com/r/RosiePatternLanguage/) if the need
 exists. 
 
+_Edit: [2018-01-08] We [posted today]({{ site.baseurl }}{% post_url
+2018-01-08-RPL-Character-Sets %}) on the design of character sets in RPL._ 
 
 ## Customization, and the *Rosie Prelude*
 
