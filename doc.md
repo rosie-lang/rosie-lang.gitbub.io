@@ -4,7 +4,7 @@ title: Documentation
 permalink: /doc/
 ---
 
-* [Rosie man page](man.html)
+* [Rosie man page](rosie.1.html)
 
 
 Documentation for Rosie v1.0.0 is at 
