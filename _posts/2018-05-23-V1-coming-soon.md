@@ -5,6 +5,12 @@ date:   2018-05-23
 categories: 
 ---
 
+We are about to release version 1.0.0-beta-11 of Rosie Pattern Language, and
+this may be the last beta release before _Rosie version 1.0_.  Our
+expectation is that version 1.0 will be released before the end of next month
+(**June, 2018**).  In this post, we will review the project goals, some of Rosie's
+current capabilities, and what we have planned for the coming year.
+
 <style type="text/css">
     <!--
       p.nogap {
@@ -12,12 +18,6 @@ categories:
       }
     -->
 </style>
-
-We are about to release version 1.0.0-beta-11 of Rosie Pattern Language, and
-this may be the last beta release before _Rosie version 1.0_.  Our
-expectation is that version 1.0 will be released before the end of next month
-(**June, 2018**).  In this post, we will review the project goals, some of Rosie's
-current capabilities, and what we have planned for the coming year.
 
 ## Project goals
 
