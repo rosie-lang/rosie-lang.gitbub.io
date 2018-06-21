@@ -1,31 +1,4 @@
----
-layout: default
-title: Blog
----
-
-<div class="posts">
-  <!-- <h1 class="content-subhead">Recent Posts</h1> -->
-  {% for post in site.posts %}
-    <section class="post">
-        <header class="post-header">
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              <h2 style="font-weight:400;" class="post-title">{{ post.title }}</h2>
-            </a>
-
-            <p class="post-meta" style="font-size:small; font-style:italic;">
-                Posted on {{ post.date | date: "%b %-d, %Y" }}
-                <!-- {% for tag in post.tags %} -->
-                <!--   <span class="post-category post-category-{{ tag }}">{{ tag }}</span> -->
-                <!-- {% endfor %} -->
-            </p>
-        </header>
-
-        <div class="post-description">
-          {{ post.excerpt }}
-	  <a href="{{ post.url | prepend: site.baseurl }}"><small>[more]</small></a>
-
-        </div>
-      <hr>
-    </section>
-  {% endfor %}
-</div>
+We have moved our site source
+to <a href="https://gitlab.com/rosie-lang">gitlab.com</a>.  If you are seeing
+this message, it is because the DNS servers have not yet updated to point to the
+new site on GitLab Pages.
